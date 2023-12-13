@@ -12,6 +12,6 @@ spec:
         - name: sleep
           image: alpine:latest
 #          command: ["sleep", "20"]
-          command: [ "exit", "1" ]
+          command: [ "false" ]
       restartPolicy: Never
   backoffLimit: 0
