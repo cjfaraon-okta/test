@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: before
+  namespace: default
   annotations:
     argocd.argoproj.io/hook: PreSync
 spec:
@@ -10,6 +11,6 @@ spec:
       containers:
         - name: sleep
           image: alpine:latest
-          command: ["sleep", "300"]
+          command: ["sleep", "600"]
       restartPolicy: Never
   backoffLimit: 0
