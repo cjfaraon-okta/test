@@ -3,7 +3,17 @@ entries:
   sync-test:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-12-13T14:36:27.061396-08:00"
+    created: "2023-12-13T14:50:24.65282-08:00"
+    description: A Helm chart for Kubernetes
+    digest: 9d0e466c1ec60b9fd541f2f3bb8c60176bd15e8d652e8a0b79eee913cc8a0971
+    name: sync-test
+    type: application
+    urls:
+    - sync-test-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-12-13T14:50:24.65249-08:00"
     description: A Helm chart for Kubernetes
     digest: 992384679c37b0739783d984af6c494ad45c26c27191b089c1712991c6ac6556
     name: sync-test
@@ -11,4 +21,4 @@ entries:
     urls:
     - sync-test-1.0.0.tgz
     version: 1.0.0
-generated: "2023-12-13T14:36:27.060095-08:00"
+generated: "2023-12-13T14:50:24.650939-08:00"
