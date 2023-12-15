@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: app-of-apps/deployment
+    path: argo-cd/app-of-apps/deployment
     repoURL: https://github.com/cjfaraon-okta/test
     targetRevision: HEAD
 ---
@@ -26,6 +26,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: app-of-apps/job
+    path: argo-cd/app-of-apps/job
     repoURL: https://github.com/cjfaraon-okta/test
     targetRevision: HEAD
