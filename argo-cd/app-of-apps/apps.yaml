@@ -19,7 +19,7 @@ metadata:
   name: job
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "-1"
+    argocd.argoproj.io/sync-wave: "-2"
 #    argocd.argoproj.io/hook: PreSync
 spec:
   destination:
@@ -30,19 +30,3 @@ spec:
     path: argo-cd/app-of-apps/job
     repoURL: https://github.com/cjfaraon-okta/test
     targetRevision: HEAD
----
-apiVersion: batch/v1
-kind: Job
-metadata:
-  name: pre-appofapps
-  namespace: default
-spec:
-  template:
-    spec:
-      containers:
-        - name: sleep
-          image: alpine:latest
-          command: ["sleep", "10"]
-      #          command: [ "false" ]
-      restartPolicy: Never
-  backoffLimit: 0
