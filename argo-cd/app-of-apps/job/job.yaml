@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: before-1
+  name: before-0
   namespace: default
 spec:
   template:
@@ -9,7 +9,7 @@ spec:
       containers:
         - name: sleep
           image: alpine:latest
-          command: ["sleep", "30"]
+          command: ["sleep", "20"]
 #          command: [ "false" ]
       restartPolicy: Never
   backoffLimit: 0
