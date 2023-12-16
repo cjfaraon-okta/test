@@ -1,10 +1,8 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: before
+  name: before-1
   namespace: default
-  annotations:
-    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
 spec:
   template:
     spec:
