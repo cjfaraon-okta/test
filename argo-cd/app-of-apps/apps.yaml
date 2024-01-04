@@ -28,6 +28,8 @@ metadata:
 spec:
   syncPolicy:
     automated: { }
+    syncOptions:
+      - Replace=true
   destination:
     namespace: default
     server: https://kubernetes.default.svc
