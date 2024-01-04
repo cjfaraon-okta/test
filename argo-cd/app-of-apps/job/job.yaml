@@ -5,7 +5,7 @@ metadata:
   namespace: default
   annotations:
     argocd.argoproj.io/hook: Sync # just define a hook for delete policy
-    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded # since Job in k8s is immutable, then we can delete on
 spec:
   template:
     spec:
@@ -17,3 +17,16 @@ spec:
 #          command: [ "false" ]
       restartPolicy: Never
   backoffLimit: 0
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: job
+spec:
+  containers:
+    - name: sleep
+      image: alpine:latest
+      #          image: alpine:20231219
+      command: ["sleep", "10"]
+    #          command: [ "false" ]
+  restartPolicy: Never
