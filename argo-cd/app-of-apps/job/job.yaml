@@ -5,7 +5,7 @@ metadata:
   namespace: default
   annotations:
     argocd.argoproj.io/hook: Sync # just define a hook for delete policy
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded # since Job in k8s is immutable, then we can delete on
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation # since Job in k8s is immutable, then we can delete on
 spec:
   template:
     spec:
