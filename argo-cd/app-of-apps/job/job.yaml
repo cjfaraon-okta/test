@@ -3,13 +3,16 @@ kind: Job
 metadata:
   name: before-0
   namespace: default
+  annotations:
+    argocd.argoproj.io/hook: Sync # just define a hook for delete policy
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
 spec:
   template:
     spec:
       containers:
         - name: sleep
-#          image: alpine:latest
-          image: alpine:20231219
+          image: alpine:latest
+#          image: alpine:20231219
           command: ["sleep", "10"]
 #          command: [ "false" ]
       restartPolicy: Never
