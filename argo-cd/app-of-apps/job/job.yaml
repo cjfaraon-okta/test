@@ -11,8 +11,8 @@ spec:
     spec:
       containers:
         - name: sleep
-#          image: alpine:latest
-          image: alpine:20231219
+          image: alpine:latest
+#          image: alpine:20231219
           command: ["sleep", "10"]
 #          command: [ "false" ]
       restartPolicy: Never
