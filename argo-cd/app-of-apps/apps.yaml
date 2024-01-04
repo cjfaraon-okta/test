@@ -6,6 +6,8 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
 spec:
+  syncPolicy:
+    automated: { }
   destination:
     namespace: default
     server: https://kubernetes.default.svc
@@ -24,6 +26,8 @@ metadata:
     argocd.argoproj.io/sync-wave: "-1"
 #    argocd.argoproj.io/hook: PreSync
 spec:
+  syncPolicy:
+    automated: { }
   destination:
     namespace: default
     server: https://kubernetes.default.svc
